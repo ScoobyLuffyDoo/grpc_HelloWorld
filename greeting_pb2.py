@@ -14,12 +14,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0egreeting.proto\"-\n\x0b\x43lientInput\x12\x10\n\x08greeting\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x1f\n\x0cServerOutput\x12\x0f\n\x07message\x18\x01 \x01(\t21\n\x07Greeter\x12&\n\x05greet\x12\x0c.ClientInput\x1a\r.ServerOutput\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0egreeting.proto\"-\n\x0b\x43lientInput\x12\x10\n\x08greeting\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x1f\n\x0cServerOutput\x12\x0f\n\x07message\x18\x01 \x01(\t\"-\n\tMathInput\x12\x0f\n\x07number1\x18\x01 \x01(\x02\x12\x0f\n\x07number2\x18\x02 \x01(\x02\"\x1b\n\nMathOutput\x12\r\n\x05total\x18\x01 \x01(\x02\x32\x31\n\x07Greeter\x12&\n\x05greet\x12\x0c.ClientInput\x1a\r.ServerOutput\"\x00\x32\x30\n\tDoTheMath\x12#\n\x06\x64omath\x12\n.MathInput\x1a\x0b.MathOutput\"\x00\x62\x06proto3')
 
 
 
 _CLIENTINPUT = DESCRIPTOR.message_types_by_name['ClientInput']
 _SERVEROUTPUT = DESCRIPTOR.message_types_by_name['ServerOutput']
+_MATHINPUT = DESCRIPTOR.message_types_by_name['MathInput']
+_MATHOUTPUT = DESCRIPTOR.message_types_by_name['MathOutput']
 ClientInput = _reflection.GeneratedProtocolMessageType('ClientInput', (_message.Message,), {
   'DESCRIPTOR' : _CLIENTINPUT,
   '__module__' : 'greeting_pb2'
@@ -34,7 +36,22 @@ ServerOutput = _reflection.GeneratedProtocolMessageType('ServerOutput', (_messag
   })
 _sym_db.RegisterMessage(ServerOutput)
 
+MathInput = _reflection.GeneratedProtocolMessageType('MathInput', (_message.Message,), {
+  'DESCRIPTOR' : _MATHINPUT,
+  '__module__' : 'greeting_pb2'
+  # @@protoc_insertion_point(class_scope:MathInput)
+  })
+_sym_db.RegisterMessage(MathInput)
+
+MathOutput = _reflection.GeneratedProtocolMessageType('MathOutput', (_message.Message,), {
+  'DESCRIPTOR' : _MATHOUTPUT,
+  '__module__' : 'greeting_pb2'
+  # @@protoc_insertion_point(class_scope:MathOutput)
+  })
+_sym_db.RegisterMessage(MathOutput)
+
 _GREETER = DESCRIPTOR.services_by_name['Greeter']
+_DOTHEMATH = DESCRIPTOR.services_by_name['DoTheMath']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
@@ -42,6 +59,12 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _CLIENTINPUT._serialized_end=63
   _SERVEROUTPUT._serialized_start=65
   _SERVEROUTPUT._serialized_end=96
-  _GREETER._serialized_start=98
-  _GREETER._serialized_end=147
+  _MATHINPUT._serialized_start=98
+  _MATHINPUT._serialized_end=143
+  _MATHOUTPUT._serialized_start=145
+  _MATHOUTPUT._serialized_end=172
+  _GREETER._serialized_start=174
+  _GREETER._serialized_end=223
+  _DOTHEMATH._serialized_start=225
+  _DOTHEMATH._serialized_end=273
 # @@protoc_insertion_point(module_scope)

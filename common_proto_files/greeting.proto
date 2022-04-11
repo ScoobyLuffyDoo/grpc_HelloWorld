@@ -1,12 +1,26 @@
+//python -m grpc_tools.protoc -I ./common_proto_files --python_out=. --grpc_python_out=. ./common_proto_files/greeting.proto
 syntax = "proto3";
 
 service Greeter {
    rpc greet (ClientInput) returns (ServerOutput) {}
 }
+service DoTheMath{
+   rpc domath(MathInput) returns(MathOutput){}
+}
+
 message ClientInput {
    string greeting = 1;
    string name = 2;
 }
 message ServerOutput {
    string message = 1;
+}
+
+message MathInput {
+   float number1=1;
+   float number2=2;
+}
+
+message MathOutput {
+   float total =1;
 }
