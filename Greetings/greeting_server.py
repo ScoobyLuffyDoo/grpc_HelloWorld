@@ -12,9 +12,9 @@ class Greeter(pb2_grpc.GreeterServicer):
 class DoTheMath(pb2_grpc.DoTheMathServicer):
     def domath(self, request, context):
         print(f'the request math received{str(request)}')
-        total = request.number1+ request.number2
-        print(total)
-        return pb2.ServerOutput(total=total)
+        mathtotal = request.number1+ request.number2
+        print(mathtotal)
+        return pb2.MathOutput(total=float(mathtotal))
 
 def server():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

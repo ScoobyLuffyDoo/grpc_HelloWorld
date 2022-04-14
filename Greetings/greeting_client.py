@@ -13,7 +13,7 @@ def greetings(i_name, i_surname):
 def mainMath(i_num1,i_num2):
    with grpc.insecure_channel('localhost:50000') as channel:
       stub = pb2_grpc.DoTheMathStub(channel)
-      response =stub.domath(pb2.ClientInput(number1=float(i_num1),number2=float(i_num2)))
+      response =stub.domath(pb2.MathInput(number1=float(i_num1),number2=float(i_num2)))
       print(str(response.total))
 
 print("Hi Welcome Client")
