@@ -11,9 +11,10 @@ message Student_ID{
 }
 
 message Student_Data{
-   string name = 1;
-   string surname = 2;
-   string Date_of_birth = 3;
+   bool result = 1;
+   string name = 2;
+   string surname = 3;
+   string Date_of_birth = 4;
 }
 message Class_data{
    string class_name =1;

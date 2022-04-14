@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emyschool.proto\"\'\n\nStudent_ID\x12\x19\n\x11student_Id_number\x18\x01 \x01(\t\"D\n\x0cStudent_Data\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07surname\x18\x02 \x01(\t\x12\x15\n\rDate_of_birth\x18\x03 \x01(\t\"6\n\nClass_data\x12\x12\n\nclass_name\x18\x01 \x01(\t\x12\x14\n\x0cteacher_name\x18\x02 \x01(\t2h\n\nMyStudents\x12-\n\x0fstudent_details\x12\x0b.Student_ID\x1a\r.Student_Data\x12+\n\x0fstudent_classes\x12\x0b.Student_ID\x1a\x0b.Class_datab\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0emyschool.proto\"\'\n\nStudent_ID\x12\x19\n\x11student_Id_number\x18\x01 \x01(\t\"T\n\x0cStudent_Data\x12\x0e\n\x06result\x18\x01 \x01(\x08\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07surname\x18\x03 \x01(\t\x12\x15\n\rDate_of_birth\x18\x04 \x01(\t\"6\n\nClass_data\x12\x12\n\nclass_name\x18\x01 \x01(\t\x12\x14\n\x0cteacher_name\x18\x02 \x01(\t2h\n\nMyStudents\x12-\n\x0fstudent_details\x12\x0b.Student_ID\x1a\r.Student_Data\x12+\n\x0fstudent_classes\x12\x0b.Student_ID\x1a\x0b.Class_datab\x06proto3')
 
 
 
@@ -49,9 +49,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _STUDENT_ID._serialized_start=18
   _STUDENT_ID._serialized_end=57
   _STUDENT_DATA._serialized_start=59
-  _STUDENT_DATA._serialized_end=127
-  _CLASS_DATA._serialized_start=129
-  _CLASS_DATA._serialized_end=183
-  _MYSTUDENTS._serialized_start=185
-  _MYSTUDENTS._serialized_end=289
+  _STUDENT_DATA._serialized_end=143
+  _CLASS_DATA._serialized_start=145
+  _CLASS_DATA._serialized_end=199
+  _MYSTUDENTS._serialized_start=201
+  _MYSTUDENTS._serialized_end=305
 # @@protoc_insertion_point(module_scope)
